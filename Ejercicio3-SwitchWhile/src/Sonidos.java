@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.text.html.Option;
+
 public class Sonidos {
     // 3- SWITCH - WHILE:
     // El archivo sonoro!
@@ -11,10 +13,14 @@ public class Sonidos {
     // vez.
     public static void main(String[] args) throws Exception {
 
-        byte option;
+        byte option=0;
+        String optionString;
+        int optionInt;
         boolean validar = false;
         int contador = 0;
         Scanner teclado = new Scanner(System.in);
+        boolean si;
+
 
         while (!validar) {
 
@@ -27,11 +33,16 @@ public class Sonidos {
             System.out.println("6.Pájaro");
             // System.out.println("0.Salir");
 
-            option = teclado.nextByte();
+            if (teclado.hasNextByte()) {
+                option = teclado.nextByte();
+            }
+            else{
+                option=0;
+            }
 
             int validarUnaVez = 0;
             // do{
-
+            si=false;
             switch (option) {
                 case 1:
                     System.out.println("¡ziuuum!");
@@ -58,7 +69,10 @@ public class Sonidos {
                     contador++;
                     break;
                 default:
-                    System.out.println("Introduce uno de los valores sugeridos entre 1 y 6.");
+                System.out.println("----------------------------------------------------------------------------");
+
+                    System.out.println("Valor incorrecto! Introduce uno de los valores sugeridos entre 1 y 6.");
+                    si = true;
                     break;
             }
             teclado.nextLine();
@@ -68,14 +82,17 @@ public class Sonidos {
             // }while(validarUnaVez<1);
 
 
-            boolean si = false;
             while (!si) {
+                System.out.println("----------------------------------------------------------------------------");
                 System.out.println("¿Quieres que te muestre otro sonido? Indica si/no.");
                 String respuesta = teclado.nextLine();
                 if ("no".equalsIgnoreCase(respuesta)) {
+
                     validar = true;
                     si = true;
                 } else if ("si".equalsIgnoreCase(respuesta)) {
+                    System.out.println("----------------------------------------------------------------------------");
+
                     si = true;
                 } else {
                     System.out.println("Introduce si/no como respuesta de la pregunta.");
@@ -85,7 +102,10 @@ public class Sonidos {
 
         }
         if (contador > 1) {
+            System.out.println("----------------------------------------------------------------------------");
             System.out.println("Parece que te ha gustado! Lo has probado " + contador + " veces.");
+            System.out.println("----------------------------------------------------------------------------");
+
 
         }
 

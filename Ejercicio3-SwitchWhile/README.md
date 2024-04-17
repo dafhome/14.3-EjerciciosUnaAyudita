@@ -1,18 +1,5 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+3- SWITCH  - WHILE:
+El archivo sonoro!
+Usando una variable byte, preguntas cuál de los sonidos quieres escuchar. Cuando eligen un número, aparece la onomatopeya de ese sonido. Luego le preguntas: quieres escuchar otro? Y sigue hasta que diga no.
+Ejemplo: elige 1- cohete, y suena ziuuum!, elige 3- moto, y suena brrrmmm!
+Puedes probar la opción do...while para asegurar de que prueba al menos una vez.

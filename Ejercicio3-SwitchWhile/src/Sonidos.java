@@ -14,8 +14,6 @@ public class Sonidos {
     public static void main(String[] args) throws Exception {
 
         byte option=0;
-        String optionString;
-        int optionInt;
         boolean validar = false;
         int contador = 0;
         Scanner teclado = new Scanner(System.in);
@@ -40,7 +38,7 @@ public class Sonidos {
                 option=0;
             }
 
-            int validarUnaVez = 0;
+            // int validarUnaVez = 0;
             // do{
             si=false;
             switch (option) {
@@ -108,6 +106,7 @@ public class Sonidos {
 
 
         }
+
 
         // do {
         // System.out.println("Elige una de las siguientes opciones y te mostraré el
